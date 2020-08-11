@@ -1,0 +1,28 @@
+body
+{
+    background-color:rgb(22, 22, 22);
+    color:white;
+    margin: 35px 40px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+iframe{
+    border:1px solid;
+    border-color: white;
+    border-radius: 20px;
+}
+h1{
+    text-align: center;
+    font-family: cursive;
+    font-size: 80px;
+    font-weight: normal;
+    line-height: 0px;
+    text-transform: capitalize;
+    margin: 50px;
+}
+p{
+    margin: 60px;
+    margin-top: auto;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,51 @@
+body{
+    font-family: cursive;
+    background-color: rgb(22, 22,22);
+    color: white;
+}
+.col{
+    background-color: red;
+}
+.btn, .btn:hover{
+  float: right;
+  color: white;
+  background-color: red;
+  font-size: large;
+}
+.navbar-custom{
+    background-color: black;
+}
+h1{
+    margin: 0px 50px;
+    font-size: 50px;
+}
+h2{
+    margin: 0px 50px;
+    font-size: x-large;
+}
+h3{
+    color: grey;
+    margin: auto 170px;
+    font-size: 20px;
+}
+table{
+    width: 80%;
+    font-size: xx-large;
+}
+.tdalign{
+    text-align: center;
+}
+.continue{
+    background-color: red;
+    font-size: 40px;
+    padding: 2px 100px;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 50px;
+}
+footer {
+    margin-bottom: 0px;
+    color: darkgray;
+    font-size: 18px;
+    text-align: center;
+}

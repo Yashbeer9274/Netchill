@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netchill</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="signin.css">
+    <script>
+        function validate() {
+            var un = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            if (un == "admin" && pass == "1234") {
+                window.location = "cont.html"
+                prompt("1234 is your OTP. Type and press OK to continue");
+            }
+            else {
+                alert("wrong Username or Password!!!!");
+                window.reload();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-custom">
+        <a class="navbar-brand" href="#">
+            <img src="img/N.png" width="100" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <span class="navbarheading">UNLIMITED FUN AND ENTERTAINMENT</span>
+    </nav>
+    <h1>Sign In</h1>
+    <div>
+        <form action="#" method="post">
+            <label for="username">Username</label><br>
+            <input type="text" id="username"><br><br><br>
+            <label for="username">Password</label><br>
+            <input type="password" id="password"><br>
+            <br><br><br><br>
+            <center>
+                <button type="submit" onclick="validate()">SignIn
+                </button>
+            </center>
+
+        </form>
+    </div>
+    <footer>
+        Any Questions? (Team Netchill)
+    </footer>
+
+</body>
+
+</html>
