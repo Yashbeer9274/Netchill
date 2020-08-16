@@ -3,6 +3,15 @@ body{
     background-color: rgb(22, 22,22);
     color: white;
     overflow-x: hidden;
+}span{
+    margin-right: 2px;
+}
+#filter,#filter:hover{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-bottom-color: white;
+    float: right;
 }
 .navbarheading{
   text-align: right;
