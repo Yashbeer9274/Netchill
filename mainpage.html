@@ -8,6 +8,24 @@
         <link rel="stylesheet" href="mainpage.css">
         <title>Netchill</title>
         <script>
+                document.addEventListener('keydown', fn)
+                function fn(e) {
+                        if (e.target.id == "filter") {
+                                var par = document.querySelectorAll('h2');
+                                for (let i = 0; i < par.length; i++)
+                                        par[i].style.display = "none"
+                                let search = e.target.value.toLowerCase();
+                                let itemlist = document.getElementsByClassName('items')
+                                for (let i = 0; i < itemlist.length; i++) {
+                                        if (itemlist[i].getAttribute("value").search(search) != -1) {
+                                                itemlist[i].style.display = "inline-block"
+                                        }
+                                        else {
+                                                itemlist[i].style.display = "none"
+                                        }
+                                }
+                        }
+                }
                 function updateTime(k) {
                         if (k < 10) return "0" + k;
                         else return k;
@@ -36,221 +54,227 @@
 <body onload="currentTime()">
         <nav class=" navbar navbar-custom">
                 <a class="navbar-brand" href="#">
-                        <img src="img/N.png" width="100" height="30" class="d-inline-block align-top" alt="">
+                        <img src="img/N.png" width="100" height="30" class="d-inline-block align-top" alt="" value="">
                 </a>
-                <!-- <span class="navbarheading">UNLIMITED FUN AND ENTERTAINMENT</span> -->
+                <span class="navbarheading">UNLIMITED FUN AND ENTERTAINMENT</span>
+                <form class="form-inline">
+
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" id="filter">
+                        <!-- <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button> -->
+                </form>
+                </form>
                 <span id="clock" style="color:white"></span>
         </nav>
         <h1>Popular movies, series and TV shows</h1>
 
-        <h2>Popular on Netchill</h2>
+        <h2 id="movie-name">Popular on Netchill</h2>
         <div class="container-fluid">
-                <a href="video.html#video1"><img
+                <a href="video.html#video1"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVhVCA6BIhV6LuWNVNApUR8DWW5PcO9FKryL51x3nj08wj5zINQrf_I8So-lAq0qsAMdr75va1QY9H8YZ-MRcveBVDA06hag8pR_LB52CoFWZ4KBE6OfFMH4yPQi.jpg?r=5bf"
-                                alt=""></a>
-                <a href="video.html#video2"><img
+                                alt="" value="money heist"></a>
+                <a href="video.html#video2"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYryfSD2xXO3xKEPb6TJdccJ1pXIto2FWmwlmeiLno1w8qmKs-rieQp78QaimZFfnNFjgf8zqVT8PyORowGvzsUIzqE.jpg?r=75b"
-                                alt=""></a>
-                <a href="video.html#video3"><img
+                                alt="" value="friends"></a>
+                <a href="video.html#video3"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABec0ULUtvuHYMtpb3dV8pdehgBAMx8KZLhWRX3euzOINpZ-8IFw0N5f_ju4WyR4TX0aBfZz33foEFTRpn1bb0bEV2HHCVUM9DzYcTOVh-pRDQXJSVzXWb3oP-IHL.jpg?r=491"
-                                alt=""></a>
-                <a href="video.html#video4"><img
+                                alt="" value="lucifer"></a>
+                <a href="video.html#video4"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRSGrqLtrmo0Hn9wN2wqkfifrcQC-H9Zi_RpLjvSbRe5lY8_4id5kC9qWk24bs3fNzCTpRf4fo4jCKdleJPwZ1mYyw74ox2L5Czae7nr2YUyFaVpHj0DNXnWAvGD.jpg?r=393"
-                                alt=""></a>
-                <a href="video.html#video5"><img
+                                alt="" value="dark"></a>
+                <a href="video.html#video5"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSugQMsDmxXdNOtVectXr9pviTTbw9cStPcrJz_Cz_cRibyDSRn0qEjfoT6K2qplxYlJ9hUHlgu45RMPWOcuSVZ_jFLYC5RMS4jhVT4U-q7k15y4EondkdVwRh_b.jpg?r=3ed"
-                                alt=""></a>
+                                alt="" value="sacred games"></a>
 
         </div>
-        <h2>Anime Series</h2>
+        <h2 id="movie-name">Anime Series</h2>
         <div class="container-fluid">
-                <a href="video.html#video6"><img
+                <a href="video.html#video6"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbrbuAcgHJlzhNdDC7rFS83UPjr1fzUCrmZsNUm-Vgv0V7MYh1_uY_wywzasMzVk4ltc0-K5VP6wwoKYC8sPaD4Ciys.jpg?r=777"
-                                alt=""></a>
-                <a href="video.html#video7"><img
+                                alt="" value="narutuo"></a>
+                <a href="video.html#video7"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQSKz_hPVRshsHKSciBhDLVocjIiAm43qWjK6RYCA-J-fSQPtTQOkdPq-4Zq2ghwYI_oIFUWmOSAxo1A1iJ_n-K2EIQ.jpg?r=bc9"
-                                alt=""></a>
-                <a href="video.html#video8"><img
+                                alt="" value="death note"></a>
+                <a href="video.html#video8"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXgnO1n7L2mGfIQrXGFaLjtaaOZPJ9nfujnEYeqq9AaOt-U6DiZiHDvNGeZ785F6WtQVqp7iC9f55hjnz_XX8WzUAQA.jpg?r=dd6"
-                                alt=""></a>
-                <a href="video.html#video9"><img
+                                alt="" value="demon slayer"></a>
+                <a href="video.html#video9"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeSm4Bl9MvvlCw9sAs0DRER1DkbavqFZ8ipcEBosgxrC2epvk0kpbh2j4wAqTD99jhBDlzUhuGPQehMnftQjGujKMvVwWeouV6ob_m_88Y36rqU3rvH5Kjte59hB.jpg?r=cf6"
-                                alt=""></a>
-                <a href="video.html#video10"><img
+                                alt="" value="baki"></a>
+                <a href="video.html#video10"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUdaImRHinvHa7serqhULF0XZxRseUCA4MSo1S9SEMa1oyniBInEAsersIAonFXp-lScFMj-sMMQJVfIF0zyLwD-9W4.jpg?r=f05"
-                                alt=""></a>
+                                alt="" value="overlord"></a>
 
         </div>
-        <h2>Science Fiction and Fantasy</h2>
+        <h2 id="movie-name">Science Fiction and Fantasy</h2>
         <div class="container-fluid">
-                <a href="video.html#video11"><img
+                <a href="video.html#video11"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABU0aQDHZjhqbxL8jYPFvpRxl_v94HlpGKOVQ4slbnJ5R_fPDJb8_06GKqfxYQZAQrYTy019r1MKMtqbjDFjqvF__uVG7L8IuVMVxYFhDl8ePILwPeSasH4n5XT4p.jpg?r=b96"
-                                alt=""></a>
-                <a href="video.html#video12"><img
+                                alt="" value="stranger things"></a>
+                <a href="video.html#video12"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABa7MYSkFqIHF4WRZjO25SnjuNsPQviQ1E1GUyuSnutDPWxqh-w3BaPWrr6P_lcCezQKNp5ot3_8f479MoB4GkZc1E68.jpg?r=ff6"
-                                alt=""></a>
-                <a href="video.html#video13"><img
+                                alt="" value="vampire diaries"></a>
+                <a href="video.html#video13"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZXxrP-K5myRqkc0iYf0_23E3LvGPRDypZTp0kKWnijUyF1UY_kNye6FK4qXhj2h8XSxhBea-f884IWNArvUocma55CK5R5CMaoOzLL3H8gCgVAVRcK7POqKFhmP.jpg?r=756"
-                                alt=""></a>
-                <a href="video.html#video14"><img
+                                alt="" value="the protector"></a>
+                <a href="video.html#video14"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVkc1JHiMfsik_OybmK_dFdD8VGnrPI7CdUmPaBp9L283kH0PG0IiA8Nx96OdU2BnaoXuJiFb2iE2r0srnATUbgPHzSaMJ7Ojyko8zH2n9ytOU6fOQlPbwqLNMZI.jpg?r=3c8"
-                                alt=""></a>
-                <a href="video.html#video15"><img
+                                alt="" value="cursed"></a>
+                <a href="video.html#video15"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeea6wosA141m3aUzBLXay2kLtAoEKln46nIeMN68hIfFzihhOQpG3KwYQbYP9DlD7LXQogrIMq5do88-cGqgLpzbNAi0gmE7v3mwI8qkcHK4rvhLOyae09-SxEHLOjfow.jpg?r=dcd"
-                                alt=""></a>
+                                alt="" value="the 100"></a>
 
         </div>
 
-        <h2>Crime and Thrill</h2>
+        <h2 id="movie-name">Crime and Thrill</h2>
         <div class="container-fluid">
-                <a href="video.html#video16"><img
+                <a href="video.html#video16"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeAuDKIU6ojBLB_b3eTdFBIUmNJ57Sr7xXk4z8I7GyygIrXQyknSm8gI_dhh5Fsp2lnm8DY9ZOEOIA-C1ReeZ5254Ow.jpg?r=01d"
-                                alt=""></a>
-                <a href="video.html#video17"><img
+                                alt="" value="the breaking bad"></a>
+                <a href="video.html#video17"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABY0AeqN391JQuluZfPUdfw55iSitKKH2zUJjxh_Ao1xtxRYbWcGwO5GnpqHIgtmUrvfH4k51nli_gyGMLn_EVj6dKxi_xkWTchZ0NFNO44j1XUVVfAJgscELL9EU.jpg?r=753"
-                                alt=""></a>
-                <a href="video.html#video18"><img
+                                alt="" value="13 reasons why?"></a>
+                <a href="video.html#video18"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbx1IeS4y2T8Q6iQx06c1Jjqeq9cVeTsFtsb-ykCUAk5loCsyH3rqNv1ONbGReQzwwTSwplkVSl7B49_p-w077cYXpc.jpg?r=5fd"
-                                alt=""></a>
-                <a href="video.html#video19"><img
+                                alt="" value="sherlock"></a>
+                <a href="video.html#video19"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXkk9jCKV96nCnwvtIXosSbLsGjhXx3ScmHsjzuq8HntkOFsWVVBFyqQPqOa1zI1jvQi8Hmc6d9CHcEfR2HqtdCLNIMRRfm9aHrbsnIjXoAUJ_93hfr5t-2JJV24.jpg?r=04c"
-                                alt=""></a>
-                <a href="video.html#video20"><img
+                                alt="" value="she"></a>
+                <a href="video.html#video20"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQZVWD48-4KbCyKt40IKEr1ZNkV35VSwncf4sYXI1C8pZS6SN1ti_yRHhIhWlbevlO26i1yx4zGj3nrunJKwrl_NmK4.jpg?r=f02"
-                                alt=""></a>
+                                alt="" value="blacklist"></a>
 
         </div>
-        <h2>US TV Shows</h2>
+        <h2 id="movie-name">US TV Shows</h2>
         <div class="container-fluid">
-                <a href="video.html#video21"><img
+                <a href="video.html#video21"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfU7VcGa22PKaop9deOC4b0-V2RrKqSepJ_aMryhLmxbs3TWcFgNgPXwOLWrK6QNExTvIdlPrC9fe7bNLheM1gznflo.jpg?r=248"
-                                alt=""></a>
-                <a href="video.html#video22"><img
+                                alt="" value="the big bang theory"></a>
+                <a href="video.html#video22"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcg0XNj13nQV4ZW59JpC2xaLWrVg3LiuZlj2JE_aRK37xQpVuFDMMGDDUyhkCCd0TjgFFwH-TTkQP7iMbNnq2xQLKlE.jpg?r=e35"
-                                alt=""></a>
-                <a href="video.html#video23"><img
+                                alt="" value="the walking dead"></a>
+                <a href="video.html#video23"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdsmPCXag9Q-OxjLC--zvuhEMXyxKdfiV9F-j-OWqWynT7Nuiugj-oKjtW9l2U1IYpU7y01kyR-iVwTauYazvPq6A_c.jpg?r=b0c"
-                                alt=""></a>
-                <a href="video.html#video24"><img
+                                alt="" value="the originals"></a>
+                <a href="video.html#video24"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABaomfbSTtP1dpiRNKo8e39a3Y9wCaGjwOKCJrQQ6XKu_e3glaNYQroxBXcBMWOG8ZPOpqTEfnmTeTq5m5kC4GMVfCfFXU5SCnnRo5SjvSvrMj8IVPccAX8MkSzYH.jpg?r=322"
-                                alt=""></a>
-                <a href="video.html#video25"><img
+                                alt="" value="locke & key"></a>
+                <a href="video.html#video25"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcWMia4Zh7s3G5rXGVWLZR0Jqspiytz8J5k-yDFh5wZb_qNjrltUrDnpM2CHPyJU3oV2Hzkx9dB7AK1ruWH35YABP1w.jpg?r=7c2"
-                                alt=""></a>
+                                alt="" value="two and a half men"></a>
 
         </div>
-        <h2>Action & Adventure</h2>
+        <h2 id="movie-name">Action & Adventure</h2>
         <div class="container-fluid">
-                <a href="video.html#video26"><img
+                <a href="video.html#video26"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXCoLl11NrRJHrVICtdL48ibjO3QcPYICjFqP_FdnCYC2G5uaYnyvh6SipZqN9flbImpTgXYYVm_AEsQOTtPuGO9_KA.jpg?r=e17"
-                                alt=""></a>
-                <a href="video.html#video27"><img
+                                alt="" value="resurrection ertugrud"></a>
+                <a href="video.html#video27"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVq1Ck17Qln2Qls2Jef8AZKXw0s48z1pdLcYi0FQfkevO8xka6lZGAvXdxC6HzpoR7ut5-kC24a-fkwPpGDnDzNhbz8.jpg?r=eab"
-                                alt=""></a>
-                <a href="video.html#video28"><img
+                                alt="" value="vikings"></a>
+                <a href="video.html#video28"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXyKLC11Nki5ojWH8fE8iPBjmfD3s9xT4TQqUEbGyX2J31QICqjqoqN9RzE2tArEeMo_shDElbwnnOZ9m_cBBgbfoM6LSWYI5IOcm3qEDReoLiGZJb800O43-fFU.jpg?r=636"
-                                alt=""></a>
-                <a href="video.html#video29"><img
+                                alt="" value="bard of blood"></a>
+                <a href="video.html#video29"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYBCclt8MHjrc7zZYIJGL_AjWMw8gfWTG33sfQhtMLE4diHipLj5wS6yC7wOQLo3sxZoygugiTEhIBRDG50KMuhnCY2ptfBNZzwuY6i43hib2o6znAg8OWz32a46.jpg?r=22f"
-                                alt=""></a>
-                <a href="video.html#video30"><img
+                                alt="" value="betaal"></a>
+                <a href="video.html#video30"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeTNqaTcbVcTy9CL4PnvTALTgytEMJ93G85iRfOo4xMkR4hKK6spdduPbXUZrnoZ4rcYx_KKUGgGziBiM7fl_P3bX_C00QhWoDF7VCJd-tx5wA8j1PT5_8ZomLD1.jpg?r=f13"
-                                alt=""></a>
+                                alt="" value="narcos mexico"></a>
 
         </div>
-        <h2>Kids' TV</h2>
+        <h2 id="movie-name">Kids' TV</h2>
         <div class="container-fluid">
-                <a href="video.html#video31"><img
+                <a href="video.html#video31"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcN1HQsTknmQCpZ6WASzelTyuP9m7u2PE1-QYIey2aMeOVG0C-UTCCfRUdjzWFr1ZKAPrFZtDzYxHSBgGw4E3HEBVDVFtTHxz04QwKvJIfnYQ1q5qeT_gu7LFUVx.jpg?r=c00"
-                                alt=""></a>
-                <a href="video.html#video32"><img
+                                alt="" value="the boss baby"></a>
+                <a href="video.html#video32"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABaehTTB5LRxEB943cPj2AjRDyaxMy1A11YP5QF7rOy9mPt55ebpbUSTa52_hKza9f8y7PI7Okg3Pf4wo53LB4T8t5dQOXfkoLt79AnL70IxKuybPbXjRiW0VuTH-.jpg?r=05c"
-                                alt=""></a>
-                <a href="video.html#video33"><img
+                                alt="" value="mighty little bheem"></a>
+                <a href="video.html#video33"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYMrv3Kb9yLhPmsay-CQIi3utaFuWXD7VmlEU0eyIKI7g6vqvHrjFqPmkk1cmsjoO9WuzkEHjLvy0Cfuc_Y-ws6GSw0.jpg?r=6ef"
-                                alt=""></a>
-                <a href="video.html#video34"><img
+                                alt="" value="dragon race to the edge"></a>
+                <a href="video.html#video34"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbq7PRFrbtbkgCfARw8i-ftThUgKUdWisbKtZE-kIEfKTTf1EQlPqpIZMzkukMqo0BdQtfkSD17s9bq8lbH2Z_-GdagNuZHr2uOy--RtuUFEoH2eOzl_jOb8AEcA.jpg?r=c34"
-                                alt=""></a>
-                <a href="video.html#video35"><img
+                                alt="" value="troll hunters"></a>
+                <a href="video.html#video35"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABY9VwvkRaq-NeG9azDI0cv7WHHwfYgL16xdvpRR2CxCrokh1YJfDuYXmezIxd_WycvZlvKt53_p-ADNf4Q9XZMtu6T0.jpg?r=03e"
-                                alt=""></a>
+                                alt="" value="pj masks"></a>
 
         </div>
-        <h2>New Releases</h2>
+        <h2 id="movie-name">New Releases</h2>
         <div class="container-fluid">
-                <a href="video.html#video1"><img
+                <a href="video.html#video1"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVhVCA6BIhV6LuWNVNApUR8DWW5PcO9FKryL51x3nj08wj5zINQrf_I8So-lAq0qsAMdr75va1QY9H8YZ-MRcveBVDA06hag8pR_LB52CoFWZ4KBE6OfFMH4yPQi.jpg?r=5bf"
-                                alt=""></a>
-                <a href="video.html#video2"><img
+                                alt="" value="@"></a>
+                <a href="video.html#video2"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYryfSD2xXO3xKEPb6TJdccJ1pXIto2FWmwlmeiLno1w8qmKs-rieQp78QaimZFfnNFjgf8zqVT8PyORowGvzsUIzqE.jpg?r=75b"
-                                alt=""></a>
-                <a href="video.html#video3"><img
+                                alt="" value="@"></a>
+                <a href="video.html#video3"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABec0ULUtvuHYMtpb3dV8pdehgBAMx8KZLhWRX3euzOINpZ-8IFw0N5f_ju4WyR4TX0aBfZz33foEFTRpn1bb0bEV2HHCVUM9DzYcTOVh-pRDQXJSVzXWb3oP-IHL.jpg?r=491"
-                                alt=""></a>
-                <a href="video.html#video4"><img
+                                alt="" value="@"></a>
+                <a href="video.html#video4"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRSGrqLtrmo0Hn9wN2wqkfifrcQC-H9Zi_RpLjvSbRe5lY8_4id5kC9qWk24bs3fNzCTpRf4fo4jCKdleJPwZ1mYyw74ox2L5Czae7nr2YUyFaVpHj0DNXnWAvGD.jpg?r=393"
-                                alt=""></a>
-                <a href="video.html#video5"><img
+                                alt="" value="@"></a>
+                <a href="video.html#video5"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSugQMsDmxXdNOtVectXr9pviTTbw9cStPcrJz_Cz_cRibyDSRn0qEjfoT6K2qplxYlJ9hUHlgu45RMPWOcuSVZ_jFLYC5RMS4jhVT4U-q7k15y4EondkdVwRh_b.jpg?r=3ed"
-                                alt=""></a>
+                                alt="" value="@"></a>
 
         </div>
-        <h2>Romantic Favorites</h2>
+        <h2 id="movie-name">Romantic Favorites</h2>
         <div class="container-fluid">
-                <a href="video.html#video41"><img
+                <a href="video.html#video41"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcigtUfZ6DthA0M8N6pz8Kj9b3Pz9NjEhzDX3fPVujkoDIbhjGoHx9ChbOebCjrQymJDPxk4d_-8tXl82QK-1Bc4QsI.jpg?r=124"
-                                alt=""></a>
-                <a href="video.html#video42"><img
+                                alt="" value="my love from the star"></a>
+                <a href="video.html#video42"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABa2ZZz2YQGiIRYIBzz_kbeRAGpFqg9XBDm8bwMsdl_742Ps2uyxyGww3DH3z9qyfl-M2ukdvLgmocCoAKn95q-_2deg.jpg?r=752"
-                                alt=""></a>
-                <a href="video.html#video43"><img
+                                alt="" value="descendants of the sun"></a>
+                <a href="video.html#video43"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfq-Kbu_0APBiVlb7rwy_zY41zKIf5FPTs-QkPzHDuy1mwbvWiv1Lp80v2L05uRytLE3eWsSg39R4TSxBz2bZGauOyk.jpg?r=bed"
-                                alt=""></a>
-                <a href="video.html#video44"><img
+                                alt="" value="guardian"></a>
+                <a href="video.html#video44"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABc8XAb4TUV6gIx9yB47lk8ytD2fXi5yWU6ckYMYf0mcYw_QvEEmBqxMvbxHtPxmCYsF3hsVLIVynZPr1jv9PgbzpzqQF8RkbvFXsfhxY2Vv2DUkqN8RJ3o6vyfmO.jpg?r=08a"
-                                alt=""></a>
-                <a href="video.html#video45"><img
+                                alt="" value="the outlander"></a>
+                <a href="video.html#video45"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABf9mnCabuG_TfzpVv9uSX2EYxf7uleS90cXcp4quQq5Dl-xsp2Un_JxMz2OzfL2ogAd8-3FTXkllMaAMqLcjzfrfhAvY2z_xXxs6OX9GtQRspg1DytzHNhL6H2QE.jpg?r=935"
-                                alt=""></a>
+                                alt="" value="when the camellia blooms"></a>
 
         </div>
-        <h2>Documentaries</h2>
+        <h2 id="movie-name">Documentaries</h2>
         <div class="container-fluid">
-                <a href="video.html#video46"><img
+                <a href="video.html#video46"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWu75abMZvXzw_uGxlj-ya3WKrs7JKhBR2p30HtDxGsmtp3P3hN0Ps6aWDu6Ju_qlioAUPURropuFRbFaSFmeZKutmYGe6Xnhu74-XDN_TnQ_KrJMeRj5VjPZZfT.jpg?r=f45"
-                                alt=""></a>
-                <a href="video.html#video47"><img
+                                alt="" value="rise of empires ottoman"></a>
+                <a href="video.html#video47"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRo1F1cQUAbMp9VKc_B8CDgSvDwpeXmLxaWeGxnK2rYfmZmVws9oV0Q9xALgxuYrB_WX8ZLJkvMYPfUT3vG8VewBf89iepS2Z_79MI9xUPB6shX_Apn6SAmmWW3B.jpg?r=6a7"
-                                alt=""></a>
-                <a href="video.html#video48"><img
+                                alt="" value="roman empire"></a>
+                <a href="video.html#video48"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABc3aFSkgkdGXqrn4_Qp4rLRvHKq1-kd4s_6fk9ULdS_Yas3mKA6M8A29AzKnyVCOK3ugf1K8bw4eY6WbdgI0aJfq3q7abJxs2s1NEMshjfVLYv95MYqNv2vCeK2b.jpg?r=216"
-                                alt=""></a>
-                <a href="video.html#video49"><img
+                                alt="" value="inside bill's brain"></a>
+                <a href="video.html#video49"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUPxA3jXSnZHLWIAqy-ZwCyzt3HofZ76MV1aThLji2DwXnlV6izmSPLxk4EZEerS6Z27CGblc5htFSY_HeCcW4eM4Kg3FVw0xZkI6Q0ZjwpSWdfXeUbjI-sWjgS8.jpg?r=89e"
-                                alt=""></a>
-                <a href="video.html#video50"><img
+                                alt="" value="fear city"></a>
+                <a href="video.html#video50"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbqX7MGf8A2R4uBlPtu9HtP9g1QKKNwp6TOXlHEEMV7QEytNSer3xxN2GZAq7pdWCN61v4gclUXhNrklzRemRZaIkV1bRUfKIYtEWfObcBJfh5DVfxW7feE9v5Oc.jpg?r=df4"
-                                alt=""></a>
+                                alt="" value="our planet"></a>
 
         </div>
-        <h2>Popular Superheros</h2>
+        <h2 id="movie-name">Popular Superheros</h2>
         <div class="container-fluid">
-                <a href="video.html#video51"><img
+                <a href="video.html#video51"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbDs3DLyiORap6C3hZSxJ2lY5H6dCuSqsEWnirKLK1mGHzpQv7MmzY7qc9E80J8tgRoKDDDrgnqmp7GN_WKjxAUzNPHUMhHDZO7lUumTlt7o7uFQh456FeO5Fi3W.jpg?r=0c3"
-                                alt=""></a>
-                <a href="video.html#video52"><img
+                                alt="" value="iron fist"></a>
+                <a href="video.html#video52"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdMbtWdOHXdFMG1PlCQLJpRuTCsImhBTvt88OJ1XeFADlM_cyOX5R7nCp0HfdubXgKffKPSFnGxIjSHcu6blj09mGWMyx1ffUR-2EAbZ0Sc3_oGnVd_obz6iAVN1.jpg?r=820"
-                                alt=""></a>
-                <a href="video.html#video53"><img
+                                alt="" value="defenders"></a>
+                <a href="video.html#video53"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdT_LBbHnzPp5_nwdkKSD96-UaZc0rQhnb5K-Oe5MtkRvFK_4ShBXdXpxxXpbT-W_7CZz_FVqh8vHXRkVQpXGUsdddQ.jpg?r=f81"
-                                alt=""></a>
-                <a href="video.html#video54"><img
+                                alt="" value="iron man"></a>
+                <a href="video.html#video54"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXk6tomjHeIP2ZLPT5ovKuAEDksVXokWGHm--r78qllNVW9k_6eshUfrI9wiWR22WW0-pGVr-GcWVlDQsYTbWbR_TqM.jpg?r=d78"
-                                alt=""></a>
-                <a href="video.html#video55"><img
+                                alt="" value="black lightning"></a>
+                <a href="video.html#video55"><img class="items"
                                 src="https://occ-0-4409-3647.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbsCMSAbIqdf_GiU2ladE7wbzsIzH_8SAqWfdQe_Lbv5VyFXt__7BHkL3WfVpregd3X1zd8HmXehMcoqx1EyGRBdsVacWEE1H2raDCyRuEfGo_0E9sARvUPQChLT.jpg?r=4ee"
-                                alt=""></a>
+                                alt="" value="ultraman"></a>
         </div>
         <footer>
                 Any Questions? (Team Netchill)
