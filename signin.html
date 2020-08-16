@@ -12,13 +12,21 @@
             var un = document.getElementById("username").value;
             var pass = document.getElementById("password").value;
             if (un == "admin" && pass == "1234") {
-                window.location = "cont.html"
-                prompt("1234 is your OTP. Type and press OK to continue");
+                if (prompt("1234 is your OTP. Type and press OK to continue") == "1234")
+                    return true;
+                else {
+                    alert("wrong OTP.!!!!");
+                    document.getElementById("username").value = "";
+                    document.getElementById("password").value = "";
+                    return false;
+                }
             }
             else {
                 alert("wrong Username or Password!!!!");
-                window.reload();
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
             }
+            return false;
         }
     </script>
 </head>
@@ -32,14 +40,14 @@
     </nav>
     <h1>Sign In</h1>
     <div>
-        <form action="#" method="post">
+        <form action="cont.html" onsubmit="return validate()">
             <label for="username">Username</label><br>
             <input type="text" id="username"><br><br><br>
             <label for="username">Password</label><br>
             <input type="password" id="password"><br>
             <br><br><br><br>
             <center>
-                <button type="submit" onclick="validate()">SignIn
+                <button type="submit">SignIn
                 </button>
             </center>
 

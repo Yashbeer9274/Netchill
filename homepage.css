@@ -42,9 +42,12 @@ footer {
 .navbarheading{
   text-align: right;
   font-family: Arial, Helvetica, sans-serif;
+  color:white;
 }
 .navbar-custom{
-    background-color: black;
+    background-color: rgb(10, 10, 10);
+    position:sticky;
+    top:0px;
 }
 .text{
     float: right;
