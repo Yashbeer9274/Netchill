@@ -11,3 +11,5 @@ for signin.html (can be changed in mainpage.html)
 
 username: admin
 password: 1234
+
+# Screenshots
