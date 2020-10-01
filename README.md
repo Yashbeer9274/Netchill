@@ -14,9 +14,10 @@ password: 1234
 
 # Screenshots
 
-![Screenshot (247)](https://user-images.githubusercontent.com/56402483/94814414-ed2ef000-0416-11eb-94ad-506261935a48.png)
 
 ![Screenshot (246)](https://user-images.githubusercontent.com/56402483/94814417-edc78680-0416-11eb-9588-0b995cbdb782.png)
+
+![Screenshot (247)](https://user-images.githubusercontent.com/56402483/94814414-ed2ef000-0416-11eb-94ad-506261935a48.png)
 
 ![2020-10-01](https://user-images.githubusercontent.com/56402483/94814418-edc78680-0416-11eb-9269-a374f047af85.png)
 
