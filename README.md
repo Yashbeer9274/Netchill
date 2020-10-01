@@ -14,14 +14,13 @@ password: 1234
 
 # Screenshots
 
+![2020-10-01 (2)](https://user-images.githubusercontent.com/56402483/94815468-316ec000-0418-11eb-95d7-dc4f82a28f9e.png)
 
-![Screenshot (246)](https://user-images.githubusercontent.com/56402483/94814417-edc78680-0416-11eb-9588-0b995cbdb782.png)
+![2020-10-01 (1)](https://user-images.githubusercontent.com/56402483/94815481-33388380-0418-11eb-911c-67f5b521ae80.png)
 
-![Screenshot (247)](https://user-images.githubusercontent.com/56402483/94814414-ed2ef000-0416-11eb-94ad-506261935a48.png)
+![Screenshot (247)](https://user-images.githubusercontent.com/56402483/94815482-33d11a00-0418-11eb-814e-06b497b36609.png)
 
-![2020-10-01](https://user-images.githubusercontent.com/56402483/94814418-edc78680-0416-11eb-9269-a374f047af85.png)
+![Screenshot (248)](https://user-images.githubusercontent.com/56402483/94815485-3469b080-0418-11eb-8202-934fe34f56b7.png)
 
-![2020-10-01 (1)](https://user-images.githubusercontent.com/56402483/94814412-ec965980-0416-11eb-9c12-8953f2f8f80a.png)
-
-![2020-10-01 (2)](https://user-images.githubusercontent.com/56402483/94814407-ea33ff80-0416-11eb-8995-b6b81e3d8ecb.png)
+![2020-10-01](https://user-images.githubusercontent.com/56402483/94815487-35024700-0418-11eb-93b5-6eb343888d70.png)
 
